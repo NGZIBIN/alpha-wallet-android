@@ -547,7 +547,7 @@ public class TokenDefinition {
         {
             if (n.getNodeType() != ELEMENT_NODE) continue;
             Element tokenType = (Element)n;
-            String name = tokenType.getAttribute("label");
+            String label = tokenType.getAttribute("label");
             switch (tokenType.getLocalName())
             {
                 case "token":
@@ -561,7 +561,7 @@ public class TokenDefinition {
                                 String chainIdStr = tokenSpec.getAttribute("network");
                                 int chainId = Integer.parseInt(chainIdStr);
                                 ci.addresses.put(chainId, new ArrayList<>(Arrays.asList(ci.contractInterface)));
-                                contracts.put(name, ci);
+                                contracts.put(label, ci);
                                 break;
                             case "contract":
                                 handleAddresses(getFirstChildElement(element));
