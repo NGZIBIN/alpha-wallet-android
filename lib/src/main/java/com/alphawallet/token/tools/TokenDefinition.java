@@ -34,7 +34,7 @@ public class TokenDefinition {
     public String holdingToken;
     private int actionCount;
 
-    public static final String TOKENSCRIPT_CURRENT_SCHEMA = "2020/03";
+    public static final String TOKENSCRIPT_CURRENT_SCHEMA = "2020/06";
     public static final String TOKENSCRIPT_REPO_SERVER = "https://repo.tokenscript.org/";
 
     private static final String ATTESTATION = "http://attestation.id/ns/tbml";
@@ -1028,7 +1028,7 @@ public class TokenDefinition {
                 if (appearanceSet.containsKey("view-iconified"))
                 {
                     legacyWarningMessage = LEGACY_WARNING_TEMPLATE.replace("${ERR1}", "view-iconified")
-                                                                  .replace("${ERR2}", tag) + "<br/>See <a href=\"http://tokenscript.org/2020/03/tokenscript\">http://tokenscript.org/2020/03/tokenscript</a>";
+                                                                  .replace("${ERR2}", tag) + "<br/>See <a href=\"http://tokenscript.org/2020/06/tokenscript\">http://tokenscript.org/2020/06/tokenscript</a>";
                 }
                 break;
             //add instances here when any view label is deprecated
