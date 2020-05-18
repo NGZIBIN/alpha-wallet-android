@@ -351,10 +351,10 @@ public class TokenDefinition {
                 Element card = (Element) node;
                 switch (card.getLocalName())
                 {
-                    case "token":
+                    case "card[@type=\"token\"]":
                         processTokenCardElements(card);
                         break;
-                    case "action":
+                    case "card[@type=\"action\"]":
                         extractActions(card);
                         break;
                 }
@@ -664,7 +664,7 @@ public class TokenDefinition {
             if (n.getNodeType() != ELEMENT_NODE) continue;
             switch (n.getLocalName())
             {
-                case "action": //action only script
+                case "card[@type=\"action\"]": //action only script
                     extractActions((Element)n);
                     break;
                 default:
